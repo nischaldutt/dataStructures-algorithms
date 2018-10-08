@@ -64,16 +64,16 @@ void print() {
 }
 
 void reverse() {
-    node *prev, *current, *next;
-    current = head;
-    prev = NULL;
+    node *prev, *current, *next; //previous, current and next pointers pointing to corresponding positions
+    current = head; //begin at the head of the list
+    prev = NULL; 
 
-    while(current != NULL) {
-        next = current->link;
-        current->link = prev;
-        prev = current;
+    while(current != NULL) { //loop while the end of the list is reached
+        next = current->link; //save address to next node
+        current->link = prev; //point node backward
+        prev = current; //adjust previous and current
         current = next;
     }
-    head = prev;
+    head = prev; //when end is reached, point head to last node
     return;
 }
