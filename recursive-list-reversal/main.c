@@ -10,7 +10,7 @@ typedef struct Node {
     struct Node* link;
 } node;
 
-void reverse(node*); //funtion reverses a list iteratively
+void reverse(node*); //funtion reverses a list recursively
 
 //head pointer that points to Node type
 node* head;
@@ -65,13 +65,13 @@ void print() {
 }
 
 void reverse(node* p) {
-    if(p->link == NULL) {
+    if(p->link == NULL) { //exit condition when we reach last node
         head = p;
         return;
     }
-    reverse(p->link);
-    node* q = p->link;
-    q->link = p;
+    reverse(p->link); //recursive call
+    node* q = p->link; //next node 
+    q->link = p; //point next node to the current node
     p->link = NULL;
     return;
 }
