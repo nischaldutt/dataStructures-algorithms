@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define MAX_SIZE 20
+#define MAX_SIZE 100 //maximum stack limit
 
 int arr[MAX_SIZE];
-int top = -1;
+int top = -1; 
 
-void push(int);
-void pop(void);
-void topElement(void);
-void print(void);
+void push(int); //inserts elements to top
+void pop(void); //deletes top element
+void topElement(void); //prints top element
+void print(void); //prints stack
 
 int main() {
     int n, i ,x;
@@ -27,20 +27,20 @@ int main() {
 }
 
 void push(int num) {
-    if(top == MAX_SIZE-1) {
+    if(top == MAX_SIZE-1) { //check if stack is full
         printf("Stack Overflow!");
         exit(1);
     }
-    arr[++top] = num;
+    arr[++top] = num; //insert element and increment top
     return;
 }
 
 void pop() {
-    if(top == -1) {
+    if(top == -1) { //check if stack is empty
         printf("Stack Underflow!");
         exit(1);
     }
-    top--;
+    top--; //remove element
     return;
 }
 
