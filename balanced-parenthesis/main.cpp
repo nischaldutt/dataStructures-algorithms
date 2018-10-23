@@ -21,10 +21,10 @@ bool isBalanced(char* exp) { //scans whole expression to detect brackets
     stack<char> S; //create a stack object
 
     while(*exp) {
-        if(exp[i] == '(' || exp[i] == '{' || exp[i] == '[') //if opening bracket is detected
-            S.push(exp[i]); //push opening bracket to the stack
-        else if(exp[i] == ')' || exp[i] == '}' || exp[i] == ']') { //if closing bracket is detected
-            if(S.empty() || !isPair(S.top(), exp[i])) //if stack is empty OR top of the stack and closing bracket are not balanced
+        if(*exp == '(' || *exp == '{' || *exp == '[') //if opening bracket is detected
+            S.push(*exp); //push opening bracket to the stack
+        else if(*exp == ')' || *exp == '}' || *exp == ']') { //if closing bracket is detected
+            if(S.empty() || !isPair(S.top(), *exp)) //if stack is empty OR top of the stack and closing bracket are not balanced
                 return false;
             else
                 S.pop(); //pop the opening bracket from top of the stack
