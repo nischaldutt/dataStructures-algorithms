@@ -1,7 +1,7 @@
 /**************************************************************************
 * 
 * 
-* Enter the postfix expression with , sepaated list to get the output
+* Enter the postfix expression with ',' separated list to get the output
 *
 *
 * *************************************************************************/
