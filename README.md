@@ -3,4 +3,3 @@ This repository contains C/C++ based implementation of popular data structures a
 <br />
 Changes and suggestions regarding improvement of the programs are most welcome.
 <br />
-*This repository is currently in development phase.*
