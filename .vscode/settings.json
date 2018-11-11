@@ -2,6 +2,7 @@
     "git.ignoreLimitWarning": true,
     "files.associations": {
         "stack": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "string_view": "c"
     }
 }
