@@ -16,8 +16,7 @@ bool isPair(char open, char close) { //checks if pair of opening or closing brac
 }
 
 bool isBalanced(char* exp) { //scans whole expression to detect brackets
-    int i;
-    
+
     stack<char> S; //create a stack object
 
     while(*exp) {
